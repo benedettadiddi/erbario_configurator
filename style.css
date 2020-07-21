@@ -74,17 +74,40 @@ aside {
 }
 
 .feature-item {
+    background-color: var(--background-color);
+    color: var(--txt-color);
     border: 1px var(--secondary-color) solid;
 
-    padding-left: 48px;
-    padding-right: 48px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    font-family: playfair-display, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    
+    margin-left: 6px;
+    padding: 12px 54px;
+}
+
+:last-child.feature-item {
+    border: 3px solid var(--secondary-color);
 }
 
 .feature-img {
-    padding-left: 12px;
-    padding-right: 12px;
+    background-color: #f4f4f4;
+    border: 4px solid #f4f4f4;
+    border-radius: 12%;
+    
+    padding: 0;
+    margin-left: 24px;
+
+    cursor: pointer;
+}
+
+:first-child.feature-img {
+    border: 3px solid var(--secondary-color);
 }
 
 .container-sidebar {
@@ -101,13 +124,13 @@ aside {
 }
 
 .plant-img {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 36px;
+    padding-bottom: 36px;
 
     align-self: center;
 }
 
-button {
+.conversion-btn {
     border: none;
     color: var(--txt-color);
     background-color: #FEC014;
@@ -115,12 +138,13 @@ button {
     font-family: playfair-display, serif;
     font-weight: 400;
     font-style: normal;
-    padding: 15px 32px;
+    padding: 15px 48px;
     text-align: center;
     text-decoration: none;
 
     cursor: pointer;
     align-self: flex-end;
     margin-right: 12px;
+    margin-bottom: 24px;
   }
 

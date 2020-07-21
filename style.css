@@ -13,6 +13,10 @@ body {
     background-color: var(--background-color);
     color: var(--txt-color);
 
+    font-family: playfair-display, serif;
+    font-weight: 400;
+    font-style: normal;
+
     margin: 0;
 }
 
@@ -32,8 +36,7 @@ h3 {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
 }
 
 header {
@@ -42,15 +45,12 @@ header {
 }
 
 main {
-    margin-top: 24px;
     grid-column: 1 / 2;
 }
 
 aside {
-    background-color: var(--secondary-color);
-
+    background-color: #f4f4f4;
     grid-column: 2 / 3;
-    grid-row: 1 / 3;
 }
 
 .container {
@@ -88,6 +88,39 @@ aside {
 }
 
 .container-sidebar {
-    padding-top: 86.4px;
     padding-left: 12px;
+    padding-top: 6px;
+
+    display: flex;
+    flex-direction: column;
 }
+
+.plant-name {
+    align-self: center;
+    margin-top: 12px;
+}
+
+.plant-img {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    align-self: center;
+}
+
+button {
+    border: none;
+    color: var(--txt-color);
+    background-color: #FEC014;
+
+    font-family: playfair-display, serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 12px;
+  }
+

@@ -91,11 +91,11 @@ aside {
     }
 }
 
-.container {
+.features-container {
     padding-bottom: 24px;
 }
 
-.container-feature-title {
+.feature-title {
     background-color: var(--primary-color);
 
     padding-top: 6px;
@@ -103,7 +103,7 @@ aside {
     padding-left: 12px;
 }
 
-.container-features {
+.features-btn {
     padding-top: 24px;
 
     display: flex;
@@ -148,7 +148,7 @@ aside {
     border: 3px solid var(--secondary-color);
 }
 
-.container-sidebar {
+.sidebar-container {
     padding-left: 12px;
     padding-top: 6px;
 
@@ -158,7 +158,7 @@ aside {
 
 @media(max-width:414px){
 
-    .container-sidebar{        
+    .sidebar-container{        
         padding: 0;       
     }
 }
@@ -177,8 +177,6 @@ aside {
 }
 
 .plant-img {
-    width: 100%;
-
     padding-top: 36px;
     padding-bottom: 36px;
 

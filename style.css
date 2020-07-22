@@ -29,6 +29,14 @@
     font-size: 1.125em;
     margin: 0;
   }
+
+  .feature-img-btn:hover {
+    border: solid 3px var(--secondary-color);
+  } 
+
+  .feature-item-btn {
+    border: solid 3px var(--secondary-color);
+  } 
   
   .wrapper {
     width: 100%;
@@ -187,44 +195,6 @@
     .conversion-btn {
       width: 80%;
     }
-    /* 
-    .vase-img {
-      width: 314px;
-      height: 314px;
-  
-      position: relative;
-      margin-left: 44px;
-    }
-  
-    .plant-name {
-      align-self: flex-start;
-      margin-left: 12px;
-    }
-  
-    .conversion-btn {
-      margin-top: 56px;
-      align-self: center;
-    }
-    #vase-blue {
-      display: none;
-    }
-  
-    .sidebar-container {
-      padding: 0;
-    }
-  
-    h2 {
-      font-size: 4em;
-    }
-    aside {
-      grid-row: 2 / 3;
-      grid-column: 1 / 2;
-    }
-    main {
-      grid-row: 3 / 4;
-    }
-    header {
-      grid-row: 1 / 2;
-    } */
+ 
   }
   

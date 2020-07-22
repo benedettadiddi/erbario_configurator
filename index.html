@@ -23,33 +23,36 @@
             <section class="features-container">
                 <h2 class="feature-title">Dimensions</h2>
                 <article class="features-btn">
-                    <button class="feature-item">S</button>
-                    <button class="feature-item">M</button>
-                    <button class="feature-item">L</button>
+                    <button class="feature-item-btn" id="item-s">S</button>
+                    <button class="feature-item-btn" id="item-m">M</button>
+                    <button class="feature-item-btn" id="item-l">L</button>
                 </article>
             </section>
 
             <section class="features-container">
                 <h2 class="feature-title">Plants</h2>
                 <article class="features-btn">
-                    <button class="feature-img"><img src="/images/benedettadiddi_erbario_monstera.png" alt="monstera plant" width="65px" height="65px"></button>
-                    <button class="feature-img"><img src="/images/benedettadiddi_erbario_banano.png" alt="monstera plant" width="65px" height="65px"></button>
-                    <button class="feature-img"><img src="/images/benedettadiddi_erbario_cactus.png" alt="monstera plant" width="65px" height="65px"></button>
+                    <button class="feature-img-btn" id="monstera"><img src="/images/benedettadiddi_erbario_monstera.png" alt="monstera plant" width="65px" height="65px"></button>
+                    <button class="feature-img-btn" id="banano"><img src="/images/benedettadiddi_erbario_banano.png" alt="monstera plant" width="65px" height="65px"></button>
+                    <button class="feature-img-btn" id="cactus"><img src="/images/benedettadiddi_erbario_cactus.png" alt="monstera plant" width="65px" height="65px"></button>
                 </article>
             </section>
 
             <section class="features-container">
                 <h2 class="feature-title">Vases</h2>
                 <article class="features-btn">
-                    <button class="feature-img"><img src="/images/benedetta_diddi_configurator_pink.png" alt="monstera plant" width="65px" height="65px"></button>
-                    <button class="feature-img"><img src="/images/benedetta_diddi_configurator_benedetta_diddi_configurator_blue3.png" alt="monstera plant" width="65px" height="65px"></button>
+                    <button class="feature-img-btn" id="pink-vase" data-vase="pink"><img src="/images/benedetta_diddi_configurator_pink.png" alt="monstera plant" width="65px" height="65px"></button>
+                    <button class="feature-img-btn" id="blue-vase" data-vase="blue"><img src="/images/benedetta_diddi_configurator_benedetta_diddi_configurator_blue3.png" alt="monstera plant" width="65px" height="65px"></button>
                 </article>
         </main>
 
         <aside>
             <section class="sidebar-container">
                 <h2 class="plant-name">MONSTERA DELICIOSA</h2>
-                <div class="plant-img"><img class="img" src="/images/pink_vase_variation.png" alt="monstera plant" width="555px" height="555px"></div>
+                <div class="plant-img">
+                    <img class="vase-img" id="vase-pink" src="/images/monstera_pink.png" alt="monstera plant" width="555px" height="555px">
+                    <img class="vase-img" id="vase-blue" src="/images/monstera_blue.png" alt="monstera plant" width="555px" height="555px">
+                </div>
                 <button class="conversion-btn">
                     <h2>ADD TO CART</h2>
                 </button>
@@ -57,6 +60,26 @@
         </aside>
 
     </div>
+
+    <script type="text/javascript" src="script.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
     
+    <script>
+    
+    document.getElementById('pink-vase').addEventListener('click',showVase);
+    document.getElementById('blue-vase').addEventListener('click',showVase);
+    function showVase(event) {  
+        gsap.to(".vase-img", { opacity: 0, duration:0 });
+
+        var vaseToShow = "#vase-" + event.target.dataset.vase;
+        gsap.to( vaseToShow, { opacity: 1, duration: .15 });
+        
+        // if (lastHairButtonClicked) {
+        //     lastHairButtonClicked.classList.remove('active');
+        //     }
+        //     event.target.classList.add('active');
+        //     lastHairButtonClicked = event.target;
+        }
+    </script>
 </body>
 </html>

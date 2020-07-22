@@ -111,7 +111,7 @@ aside {
     justify-content: center;
 }
 
-.feature-item {
+.feature-item-btn {
     background-color: var(--background-color);
     color: var(--txt-color);
     border: 1px var(--secondary-color) solid;
@@ -129,11 +129,11 @@ aside {
     padding: 12px 54px;
 }
 
-:last-child.feature-item {
+:last-child.feature-item-btn {
     border: 3px solid var(--secondary-color);
 }
 
-.feature-img {
+.feature-img-btn {
     background-color: var(--primary-color);
     border: 4px solid var(--primary-color);
     border-radius: 12%;
@@ -144,13 +144,16 @@ aside {
     cursor: pointer;
 }
 
-:first-child.feature-img {
+:first-child.feature-img-btn {
     border: 3px solid var(--secondary-color);
 }
 
 .sidebar-container {
     padding-left: 12px;
     padding-top: 6px;
+
+    width: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -181,6 +184,13 @@ aside {
     padding-bottom: 36px;
 
     align-self: center;
+
+}
+
+.vase-img {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
 }
 
 @media(max-width:414px){
@@ -193,7 +203,7 @@ aside {
 
 @media(max-width:414px){
 
-    .img{        
+    .vase-img{        
         width: 314px;
         height: 314px;
 
@@ -213,11 +223,12 @@ aside {
     padding: 15px 48px;
     text-align: center;
     text-decoration: none;
+    font-size: 1em;
 
     cursor: pointer;
-    align-self: flex-end;
-    margin-right: 12px;
-    margin-bottom: 24px;
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
   }
 
   @media(max-width:414px){

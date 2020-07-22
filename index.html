@@ -52,6 +52,10 @@
                 <div class="plant-img">
                     <img class="vase-img" id="vase-pink" src="/images/monstera_pink.png" alt="monstera plant" width="555px" height="555px">
                     <img class="vase-img" id="vase-blue" src="/images/monstera_blue.png" alt="monstera plant" width="555px" height="555px">
+                    <img class="vase-img" id="one-blue" src="/images/1blue.jpeg" alt="monstera plant" width="555px" height="555px">
+                    <img class="vase-img" id="one-pink" src="/images/1pink.jpeg" alt="monstera plant" width="555px" height="555px">
+                    <img class="vase-img" id="two-blue" src="/images/2blue.jpeg" alt="monstera plant" width="555px" height="555px">
+                    <img class="vase-img" id="two-pink" src="/images/2pink.jpeg" alt="monstera plant" width="555px" height="555px">
                 </div>
                 <button class="conversion-btn">
                     <h2>ADD TO CART</h2>
@@ -65,21 +69,88 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
     
     <script>
-    
-    document.getElementById('pink-vase').addEventListener('click',showVase);
-    document.getElementById('blue-vase').addEventListener('click',showVase);
-    function showVase(event) {  
-        gsap.to(".vase-img", { opacity: 0, duration:0 });
 
-        var vaseToShow = "#vase-" + event.target.dataset.vase;
-        gsap.to( vaseToShow, { opacity: 1, duration: .15 });
+const vasoPinkBan = document.querySelector("#vase-pink");
+const vasoBlueBan = document.querySelector("#vase-blue");
+const vasoBlueOne = document.querySelector("#one-blue");
+const vasoPinkOne = document.querySelector("#one-pink");
+const vasoBlueTwo = document.querySelector("#two-blue");
+const vasoPinkTwo = document.querySelector("#two-pink");
+const buttonMonstera = document.querySelector("#monstera");
+const buttonBanano = document.querySelector("#banano");
+const buttonCactus = document.querySelector("#cactus");
+const buttonP = document.querySelector("#pink-vase");
+const buttonB = document.querySelector("#blue-vase");
+
+
+    //   EVENTS PLANTS
+buttonMonstera.addEventListener("click", function () {
+        vasoPinkBan.style.display = "inline";
+        vasoBlueBan.style.display = "none";
+      });
+buttonBanano.addEventListener("click", function () {
+    vasoPinkBan.style.display = "none";
+    vasoBlueBan.style.display = "none";
+    vasoPinkOne.style.display = "inline";
+    vasoBlueOne.style.display = "none";
+    vasoPinkTwo.style.display = "none";
+    vasoBlueTwo.style.display = "none";
+      });
+buttonMonstera.addEventListener("click", function () {
+    vasoPinkBan.style.display = "inline";
+    vasoBlueBan.style.display = "none";
+    vasoPinkOne.style.display = "none";
+    vasoBlueOne.style.display = "none";
+    vasoPinkTwo.style.display = "none";
+    vasoBlueTwo.style.display = "none";
+      });
+buttonCactus.addEventListener("click", function () {
+    vasoPinkBan.style.display = "none";
+    vasoBlueBan.style.display = "none";
+    vasoPinkOne.style.display = "none";
+    vasoBlueOne.style.display = "none";
+    vasoPinkTwo.style.display = "inline";
+    vasoBlueTwo.style.display = "none";
+      });
+
+// EVENTS VASES
+// Monstera
+buttonB.addEventListener("click", function () {
+    vasoPinkBan.style.display = "none";
+    vasoBlueBan.style.display = "inline";
+    vasoPinkOne.style.display = "none";
+    vasoBlueOne.style.display = "none";
+    vasoPinkTwo.style.display = "none";
+    vasoBlueTwo.style.display = "none";
+      });
+buttonP.addEventListener("click", function () {
+    vasoPinkBan.style.display = "inline";
+    vasoBlueBan.style.display = "none";
+    vasoPinkOne.style.display = "none";
+    vasoBlueOne.style.display = "none";
+    vasoPinkTwo.style.display = "none";
+    vasoBlueTwo.style.display = "none";
+      });
+
+
+
+
+
+
+    // document.getElementById('pink-vase').addEventListener('click',showVase);
+    // document.getElementById('blue-vase').addEventListener('click',showVase);
+    // function showVase(event) {  
+    //     gsap.to(".vase-img", { opacity: 0, duration:0 });
+
+    //     var vaseToShow = "#vase-" + event.target.dataset.vase;
+    //     gsap.to( vaseToShow, { opacity: 1, duration: .15 });
         
-        // if (lastHairButtonClicked) {
-        //     lastHairButtonClicked.classList.remove('active');
-        //     }
-        //     event.target.classList.add('active');
-        //     lastHairButtonClicked = event.target;
-        }
+    //     // if (lastHairButtonClicked) {
+    //     //     lastHairButtonClicked.classList.remove('active');
+    //     //     }
+    //     //     event.target.classList.add('active');
+    //     //     lastHairButtonClicked = event.target;
+    //     }
     </script>
 </body>
 </html>
